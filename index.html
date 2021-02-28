@@ -5,11 +5,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESUME</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css ">
-</head>
+    <!-- <link rel="stylesheet" href="style.css "> -->
+    <style>
+        *body {
+margin: 0;
+padding: 0;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+.container {
+display: grid;
+height: 100vh;
+width: 100vw;
+/* grid-gap: 1rem; */
+grid-template-areas:
+'top-name top-summary top-summary top-summary'
+'aside section section section'
+}
+
+
+
+#top-name {
+background-color: rgb(214, 234, 248);
+grid-area: top-name;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/* #name{
+    display: flex;
+    flex-direction: column;
+} */
+#name{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#top-summary {
+background-color: rgb(235, 245, 251);
+grid-area: top-summary;
+padding: 0px 20px;
+display: flex;
+align-items: center;
+}
+
+
+.top {
+padding: 20px;
+}
+
+#section {
+grid-area: section;
+}
+
+#section-box{
+    margin: 1.3rem;
+    padding: 1px 10px;
+}
+#section-box > h3{
+    margin-top: 0 !important;
+}
+
+#skill-box{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+#skill-box span{
+    padding: 0 10px;
+    background-color: rgb(214, 234, 248);
+    border-color: rgb(0, 0, 0);
+    /* border: 3px solid black; */
+    border-radius: 6px;
+    font-weight:bold;
+}
+/* #skill-box li{
+    list-style: none;
+    background-color: rgb(214, 234, 248);
+    border-radius: 6px;
+    font-weight:bold;
+} */
+
+
+#certif{
+    margin-top: 1.5rem;
+}
+#certif ul{
+    margin-block-start: 0;
+    padding-left: 20px;
+}
+.proj-box h4{
+    margin: 0px;
+    margin-top: 8px;
+}
+.proj-box ul {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+}
+.edu-container p{
+    margin: 0;
+}
+.edu-box{
+    display: flex;
+    justify-content: space-between;
+}
+.edu-box h4{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 8px;
+}
+.edu-box h5{
+    text-align: center;
+    width: -webkit-fill-available;
+    margin-bottom: 0;
+}
+
+
+#aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background-color: rgb(241, 250, 255);
+    padding: 0 10px;
+}
+.aside{
+    margin: 1rem;
+}
+#aside > div{
+    padding: 0 10px;
+    text-align: center;
+}
+#aside #contact ul{
+    list-style: none;
+    padding-left: 0px;
+}
+#aside #certif ul{
+    list-style: none;
+    padding-left: 0px;
+}
+#aside #links ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.fa-hackerrank{
+color:rgb(14, 185, 14)
+}
+
+.heading {
+margin: 0;
+margin-bottom: 4px;
+}
+
+
+#images {
+display: flex;
+justify-content: space-around;
+margin-top: 10px;
+}
+#images img{
+height: 40px;
+}
+a{
+    text-decoration: none;
+    color: #0000EE;
+}
+p{
+    margin-block-start: 0;
+    margin-block-end: 2px;
+}
+hr{
+    margin: 0 ;
+    margin-bottom: 2px;
+    border-top: 1px solid black;
+}
+h3{
+    font-weight: bold;
+    margin: 5px 0;
+}
+h4{
+    font-weight: 500;
+}
+h5{
+    font-weight: 500;
+}
+.main{
+    margin-top: 2.5rem;
+}
+.no-style{
+    font-weight: 400;
+    font-size: 0.8em;
+}
+    </style>
+</head>
 <body>
     <div class="container">
         <div id="top-name" class="top">
@@ -22,26 +218,62 @@
             <div>
                 <h3 class="heading">SUMMARY</h3> 
                 <p>Fresher looking for an entry level Software Developer role, having
-                    familiarity with basic programming, DSA and OOP concepts, aim to write code to make impact upon people's
-                    lives, businesses and to contribute to the company's growth.</p>
+                    familiarity with basic programming, DSA and OOP concepts.</p>
             </div>
         </div>
 
         <div id="section">
             <div id="section-box">
-                <h3 class="heading, main">PROJECTS</h3> <hr>
+                <!-- <div id="skills" class="aside"> -->
+                <h3 class="heading, main">SKILLS</h3> <hr>
+                <div id="skill-box">
+                    <span>  C  </span>
+                    <span>  Core Java  </span>
+                    <span>  HTML  </span>
+                    <span>  CSS  </span>
+                    <span>  JavaScript  </span>
+                </div>    
                 <div id="proj-container">
+                    <h3 class="heading, main">PROJECTS</h3> <hr>
                     <div class="proj-box">
-                        <h4>Web Development</h4>
-                        <p>Dummy Website with <strong>Fully Responsive rendering</strong></p>
+                        <h4>Web Development<span class="no-style"> (Static Landing Page)</span></h4>
                         <div class="links">                            
+                            <p> [<a href="https://shivdv.github.io/responsive_project/" target="_blank">Demo <i class="fa fa-external-link" aria-hidden="true"></i></a>]</p>
+                                <p>[<a href="https://github.com/ShivDv/responsive_project/"
+                                    target="_blank">Code <i class="fa fa-github" aria-hidden="true"></i></a>]</p>
+                        </div>
+                        <!-- <p>  [<a href="https://shivdv.github.io/responsive_project/" target="_blank">Demo <i class="fa fa-external-link" aria-hidden="true"></i></a>]  [<a href="https://github.com/ShivDv/responsive_project" target="_blank">Code <i class="fa fa-github" aria-hidden="true"></i></a>]</p> -->
+                        <ul id="proj-high">
+                            <li>Fully responsive rendering using <strong>media queries</strong></li>
+                            <li>Background images using <strong>pseudo selectors</strong></li>
+                            <li>Consists navigation bar and contact form</li>
+                        </ul>
+                        <!-- <div class="links">                            
                             <p><i class="fa fa-external-link" aria-hidden="true"></i> <a
                                 href="https://shivdv.github.io/responsive_project/" target="_blank">[Click Here]</a>
                             </p>
                             <p><i class="fa fa-github" aria-hidden="true"></i> <a
                                 href="https://github.com/ShivDv/responsive_project" target="_blank">[Github Repo]</a>
                             </p>
+                        </div> -->
+                    </div>
+                    <div class="proj-box">
+                        <h4>Image Format Convertor<span class="no-style"> (Upload-Convert-Download)</span></h4>
+                        <div class="links">                            
+                            <p> [<a href="https://shivdv.github.io/imageFormatConvertor/" target="_blank">Demo <i class="fa fa-external-link" aria-hidden="true"></i></a>]</p>
+                                <p>[<a href="https://github.com/ShivDv/imageFormatConvertor/"
+                                    target="_blank">Code <i class="fa fa-github" aria-hidden="true"></i></a>]</p>
                         </div>
+                        <!-- <p>
+                            [<a href="https://shivdv.github.io/imageFormatConvertor/" target="_blank">Demo <i class="fa fa-external-link" aria-hidden="true"></i></a>]
+                            [<a href="https://github.com/ShivDv/imageFormatConvertor/" target="_blank">Code <i class="fa fa-github" aria-hidden="true"></i></a>]
+                        </p> -->
+                        <ul id="proj-high">
+                            <li>Client side processing using <strong>HTML Canvas</strong> and <strong>JavaScript</strong></li>
+                            <!-- <li>Used <strong>HTML Canvas</strong> to convert</li>
+                            <li>Used <strong>JavaScript</strong> to perform the job</li>
+                            <li>User can select from the options to convert from any file type to selected format</li> -->
+                        </ul>
                     </div>
                     <div class="proj-box">
                         <h4>This Resume</h4>
@@ -49,26 +281,12 @@
                             I have created this Resume using HTML & CSS
                         </p>
                         <div class="links">                            
-                            <p><i class="fa fa-external-link" aria-hidden="true"></i> <a
-                                href="https://shivdv.github.io/myResume/" target="_blank">[Click Here]</a></p>
-                                <p><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/ShivDv/myResume/"
-                                    target="_blank">[Github Repo]</a></p>
+                            <p> [<a href="https://shivdv.github.io/myResume/" target="_blank">Demo <i class="fa fa-external-link" aria-hidden="true"></i></a>]</p>
+                                <p>[<a href="https://github.com/ShivDv/myResume/"
+                                    target="_blank">Code <i class="fa fa-github" aria-hidden="true"></i></a>]</p>
                         </div>
                     </div>
                 </div>
-                <section id="certif">
-                    <h3 class="heading, main">CERTIFICATION</h3> <hr>
-                    <div class="edu-box">
-                        <h4>AMCAT Employability Test [<a href="https://drive.google.com/file/d/1L06bAyzOXn7SIFTAVuKu1Jpy4nQF0okt/view?usp=sharing" target="_blank">Click Here</a>] </h4>
-                        <h4 class="edu-year">06/2020</h4>
-                    </div>
-                    <ul>
-                        <li>Automata Fix - 72/100 <strong>99%ile</strong> </li>
-                        <li>Logical Ability - 730/900 <strong>99%ile</strong></li>
-                        <li>Quantitative Aptitude - 740/900 <strong>98%ile</strong></li>
-                        <li>English Comprehension - 725/900 <strong>99%ile</strong></li>
-                    </ul>
-                </section>
                 <section id="edu-section" class="content-box">
                     <h3 class="heading, main">EDUCATION</h3> <hr>
                     <div class="edu-container">
@@ -95,33 +313,52 @@
                 </section>
             </div>
         </div>
-        <div id="aside">
+        <aside id="aside">
             <div id="contact" class="aside">
                 <h3 class="heading, main">CONTACT</h3> <hr>
                 <ul>
-                    <li class="items">&#9742; 9910474406</li>
-                    <li class="items">&#9993; aspshivam&#64;gmail.com</li>
-                    <li class="items"><i class="fa fa-map-marker" aria-hidden="true"></i> Delhi</li>
-                    <li class="items">
+                    <li class="items">📧<a href="mailto:aspshivam@gmail.com"> aspshivam@gmail.com</a></li>
+                    <li class="items">📞<a href="tel:+919910474406">   9910474406</a></li>
+                    <!-- <li class="items">📞&#9742; 9910474406</li> -->
+                    <!-- <li class="items">&#9993; aspshivam&#64;gmail.com</li> -->
+                    <li class="items"><i class="fa fa-map-marker" aria-hidden="true"></i>Delhi</li>
+                    <!-- <li class="items">
                         <div id="images">
                             <a href="https://github.com/ShivDv" target="_blank"> <img
                                     src="download-removebg-preview.png" alt=""> </a>
                             <a href="https://hackerrank.com/aspshivam" target="_blank"> <img
                                     src="hr-removebg-preview.png" alt=""> </a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
-            <div id="skills" class="aside">
-                <h3 class="heading, main">SKILLS</h3> <hr>
-                <ul id="skill-box">
-                    <li>C</li>
-                    <li>Java</li>
-                    <li>HTML/CSS</li>
-                    <li>JavaScript</li>
+            <div id="certif">
+                <h3 class="heading, main">TEST SCORES</h3> <hr>
+                <div class="edu-box">
+                    <h5>TCS NQT</h5>
+                </div>
+                <ul>
+                    <li>Programming - 41/60 <a href="https://drive.google.com/file/d/1_5j5PLjSpoNY6UO7B06jBq4OkMy78FWZ/view?usp=sharing" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+                    <li>NQT - 1396.6/1800 <a href="https://drive.google.com/file/d/18pwk4VVcGPbO_azHb4Zv06dY487L97Dv/view?usp=sharing" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+                </ul>
+                <div class="edu-box">
+                    <h5>AMCAT <a href="https://drive.google.com/file/d/1L06bAyzOXn7SIFTAVuKu1Jpy4nQF0okt/view?usp=sharing" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a> </h5>
+                </div>
+                <ul>
+                    <li>Automata Fix - 72/100 <b>99%ile</b> </li>
+                    <li>Logical - 730/900 <b>99%ile</b></li>
+                    <li>Quant - 740/900 <b>98%ile</b></li>
+                    <li>Verbal - 725/900 <b>99%ile</b></li>
                 </ul>
             </div>
-        </div>
+            <div id="links" class="aside">
+                <h3 class="heading, main">LINKS</h3> <hr>
+                <ul>
+                    <li class="items"><i class='fab fa-hackerrank'></i><a href="https://hackerrank.com/aspshivam" target="_blank">HackerRank</a></li>
+                    <li class="items"><i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/ShivDv" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </aside>
     </div>
 </body>
 
